@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+  pre_build:
+    commands:
+      - echo Starting build...
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Copying files...
+  post_build:
+    commands:
+      - echo Build complete!
+
+artifacts:
+  files:
+    - index.html
+    - appspec.yml
+    - scripts/**/*
+  discard-paths: no
